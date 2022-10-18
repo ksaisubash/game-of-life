@@ -7,7 +7,7 @@ pipeline {
             }
         }
         stage('learning') {
-            agent { label 'OPENJDK-11-MAVEN' }
+            agent { label 'ubuntu_node-1' }
             steps {
                 git url: 'https://github.com/ksaisubash/game-of-life.git',
                     branch: 'master'
